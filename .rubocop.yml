@@ -10,6 +10,14 @@ AllCops:
     - 'config/environments/*'
     - 'test/dummy/bin/update'
     - 'test/dummy/bin/setup'
+    - 'test/dummy/db/schema.rb'
+    - 'test/dummy/db/migrate/*.rb'
+    - 'test/dummy/node_modules/**/*'
+    - 'test/dummy/bin/*'
+    - 'test/dummy/config/initializers/simple_form_bootstrap.rb'
+    - 'test/dummy/config/initializers/simple_form.rb'
+    - 'test/dummy/config/application.rb'
+    - 'test/dummy/config/environments/*'
 
 Rails:
   Enabled: true

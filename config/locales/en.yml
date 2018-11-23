@@ -1,0 +1,5 @@
+en:
+  stripes:
+    card_payments:
+      card_details: 'Purchase'
+      purchase: 'Card details'

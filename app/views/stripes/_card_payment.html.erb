@@ -1,0 +1,10 @@
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Stripes::Configuration.stripe_public_key %>"
+  data-description="<%= t('stripes.card_payments.card_details') %>"
+  data-amount="<%= price %>"
+  data-locale="<%= I18n.locale %>"
+  data-currency="<%= currency %>"
+  data-panel-label="<%= t('stripes.card_payments.purchase') %>"
+  data-label="<%= t('stripes.card_payments.purchase') %>"
+  data-allow-remember-me="false">
+</script>
