@@ -32,6 +32,7 @@ module Stripes
       http_basic_auth_password
       stripe_public_key
       stripe_private_key
+      stripe_webhook_secret
     ].freeze
 
     class_attribute(*ATTRIBUTES)

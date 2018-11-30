@@ -2,7 +2,7 @@ require 'test_helper'
 
 module Stripes
   class ChargeFailedEventTest < ActionDispatch::IntegrationTest
-    include LoginHelper
+    include HeadersHelper
     include ChargesHelper
     include EventsHelper
 
@@ -13,7 +13,7 @@ module Stripes
       post(
         '/stripes/hooks',
         params: event.to_h.to_json,
-        headers: { 'Content-Type' => 'text/json' }.merge(login_header)
+        headers: webhook_headers(event.to_h.to_json)
       )
 
       assert_response :success

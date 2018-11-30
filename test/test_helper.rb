@@ -23,7 +23,7 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
 end
 
 require_relative 'support/factory'
-require_relative 'support/login_helper'
+require_relative 'support/headers_helper'
 require_relative 'support/sources_helper'
 require_relative 'support/charges_helper'
 require_relative 'support/events_helper'
