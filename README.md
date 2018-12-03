@@ -22,10 +22,11 @@ module Stripes
   Configuration.configure do |config|
     config.order_class = ::Order
     config.order_table_foreign_key = :order_id
-    config.http_basic_auth_user = 'user'
-    config.http_basic_auth_password = 'secret'
-    config.stripe_public_key = ENV.fetch('PUBLISHABLE_KEY')
-    config.stripe_private_key = ENV.fetch('SECRET_KEY')
+    config.http_basic_auth_user = ENV.fetch('STRIPES_HTTP_AUTH_USER')
+    config.http_basic_auth_password = ENV.fetch('STRIPES_HTTP_AUTH_PASSWORD')
+    config.stripe_public_key = ENV.fetch('STRIPES_PUBLIC_KEY')
+    config.stripe_private_key = ENV.fetch('STRIPES_SECRET_KEY')
+    config.stripe_webhook_secret = ENV.fetch('STRIPES_WEBHOOK_SECRET')
   end
 end
 ```
